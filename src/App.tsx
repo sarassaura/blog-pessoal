@@ -1,7 +1,11 @@
-import Home from "./pages/Home";
+import Grid from "./components/Grid/Grid";
 
 function App() {
-  return <Home />;
+  return (
+    <>
+      <Grid />
+    </>
+  );
 }
 
 export default App;
