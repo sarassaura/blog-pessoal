@@ -1,5 +1,5 @@
-import homeLogo from "../../assets/react.svg";
-import "./style.css";
+import homeLogo from "../../assets/home.png";
+import "./styles.css";
 
 function Home() {
   return (
