@@ -1,5 +1,4 @@
 import "./App.css";
-import UserProvider from "./contexts/UserContext";
 import Home from "./pages/Home";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import Login from "./pages/Login";
@@ -14,22 +13,20 @@ function App() {
   return (
     <>
       <AuthProvider>
-        <UserProvider>
-          <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<Layout />}>
-                <Route index element={<Login />} />
-                <Route path="/login" element={<Login />} />
-                <Route path="/home" element={<Home />} />
-                <Route path="/cadastro" element={<Cadastro />} />
-                <Route path="/temas" element={<ListaTemas />} />
-                <Route path="/cadastroTema" element={<FormularioTema />} />
-                <Route path="/editarTema/:id" element={<FormularioTema />} />
-                <Route path="/deletarTema/:id" element={<DeletarTema />} />
-              </Route>
-            </Routes>
-          </BrowserRouter>
-        </UserProvider>
+        <BrowserRouter>
+          <Routes>
+            <Route path="/" element={<Layout />}>
+              <Route index element={<Login />} />
+              <Route path="/login" element={<Login />} />
+              <Route path="/home" element={<Home />} />
+              <Route path="/cadastro" element={<Cadastro />} />
+              <Route path="/temas" element={<ListaTemas />} />
+              <Route path="/cadastroTema" element={<FormularioTema />} />
+              <Route path="/editarTema/:id" element={<FormularioTema />} />
+              <Route path="/deletarTema/:id" element={<DeletarTema />} />
+            </Route>
+          </Routes>
+        </BrowserRouter>
       </AuthProvider>
     </>
   );
