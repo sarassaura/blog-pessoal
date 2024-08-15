@@ -1,9 +1,9 @@
 import { useContext, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { AuthContext } from "../../contexts/AuthContext";
-import loginLogo from "../../assets/login.jpg";
+import loginLogo from "../../assets/cadastro.jpg";
 function Perfil() {
-  let navigate = useNavigate();
+  const navigate = useNavigate();
 
   const { usuario } = useContext(AuthContext);
 
