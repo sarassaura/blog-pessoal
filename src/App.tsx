@@ -12,11 +12,15 @@ import ListaPostagens from "./components/postagens/ListaPostagens";
 import FormularioPostagem from "./components/postagens/FormularioPostagem";
 import DeletarPostagem from "./components/postagens/DeletarPostagens";
 import Perfil from "./pages/Perfil";
+import { ToastContainer } from "react-toastify";
+
+import "react-toastify/dist/ReactToastify.css";
 
 function App() {
   return (
     <>
       <AuthProvider>
+        <ToastContainer />
         <BrowserRouter>
           <Routes>
             <Route path="/" element={<Layout />}>
